@@ -68,17 +68,17 @@ Per Availability Zone:
 
 ## Network Architecture Diagrams
 
-1. [Global Network Design](diagrams/global-network.md)
+1. [Global Network Design](diagrams/00_global_network.md)
    - Enterprise-wide network structure
    - Regional connectivity
    - Transit Gateway design
 
-2. [Regional Network Design](diagrams/regional-design.md)
+2. [Regional Network Design](diagrams/01_regional_design.md)
    - VPC structure
    - Environment segmentation
    - CIDR allocation
 
-3. [Availability Zones Design](diagrams/availability-zones.md)
+3. [Availability Zones Design](diagrams/02_availability_zones.md)
    - Multi-AZ layout
    - Subnet distribution
    - HA components
