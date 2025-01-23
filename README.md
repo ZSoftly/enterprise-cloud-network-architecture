@@ -7,6 +7,10 @@ Ditah Kumbong
 
 *This documentation was initially generated using Claude AI and has been thoroughly reviewed, adjusted, and enhanced based on my professional experience in cloud infrastructure and network design.*
 
+## Documentation Structure
+- [Networking Fundamentals](networking-fundamentals.md) - Core networking concepts and principles
+- [Diagrams](diagrams) - Visual architecture representations
+
 ## Network Design Overview
 
 ### Private IP Range Allocation (10.x.x.x)
