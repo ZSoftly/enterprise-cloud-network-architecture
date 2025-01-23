@@ -11,15 +11,24 @@ graph LR
 
     subgraph "Network Components"
         WEB --> IGW[Internet Gateway]
-        APP --> NAT[NAT Gateway]
-        DB --> EP[VPC Endpoints]
-        MGT --> TG[Transit Gateway]
+        WEB --> NAT[NAT Gateway]
+        APP --> VPE1[VPC Endpoints]
+        DB --> VPE2[VPC Endpoints]
+        PROD --> TGW[Transit Gateway<br>Regional Resource]
+    end
+
+    subgraph "Component Notes"
+        NAT -->|"Placed in Public Subnet"| WEB
+        VPE1 -->|"Specific to App Tier"| APP
+        VPE2 -->|"Specific to DB Tier"| DB
+        TGW -->|"Regional Service"| PROD
     end
 ```
 
 ## Design Pattern
-1. Tier separation
-2. CIDR allocation
-3. Network components
+1. NAT Gateway in public subnet (Web Tier)
+2. VPC Endpoints per private tier as needed
+3. Transit Gateway as regional service
+4. Clear separation of network components
 
 Author: Ditah Kumbong
